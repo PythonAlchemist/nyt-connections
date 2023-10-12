@@ -1,5 +1,6 @@
 import pandas as pd
 from datetime import datetime
+from src.utils import ROOT_DIR
 
 
 class Dataset:
@@ -8,7 +9,7 @@ class Dataset:
 
     def load_data(self) -> pd.DataFrame:
         data, date = [], None
-        f = open("data/connections.csv", "r")
+        f = open(f"{ROOT_DIR}/data/connections.csv", "r")
         for line in f:
             line = line.strip().split(",")
             if line[0].startswith("NYT Connections"):
@@ -36,4 +37,4 @@ class Dataset:
         return datetime.strptime(date_string, "%B %d, %Y")
 
     def write_clean_data(self) -> None:
-        self.data.to_csv("data/connections_clean.csv", index=False)
+        self.data.to_csv(f"{ROOT_DIR}/data/connections_clean.csv", index=False)

@@ -1,6 +1,6 @@
 import openai
 from dotenv import load_dotenv, find_dotenv
-from data.clean import Dataset
+from src.clean import Dataset
 from typing import List
 from termcolor import colored
 import os
