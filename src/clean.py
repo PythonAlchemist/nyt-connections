@@ -1,6 +1,6 @@
 import pandas as pd
 from datetime import datetime
-from src.utils import ROOT_DIR
+from utils import ROOT_DIR
 
 
 class Dataset:

@@ -28,3 +28,7 @@ these examples to the model will have a larger impact than quantity of samples. 
 ## 2. Use OpenAI Embeddings
 
 embedd each of the words and use a 16x16 distance matrix to find the closest words to each other. This implementation should be pretty cheap and is very deterministic and testable.
+
+## 3. Fine Tune GPT-3.5
+
+Use the GPT-3.5 model to fine tune on the connections dataset. This method will allow us to pass more training data into the model and have much cheaper inference costs
